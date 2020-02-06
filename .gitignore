@@ -25,3 +25,6 @@ yarn-error.log*
 # remove .idea
 .idea
 .idea/
+
+# comment ApiKey
+src/utils/ApiKey.js
