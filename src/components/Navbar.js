@@ -3,9 +3,9 @@ import React from "react";
 function Navbar() {
     return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-dark bg-dark">
         <div className="container">
-          <div className="navbar-header light">
+          <div className="navbar-header">
               MovieSeriesInfo
           </div>
         </div>
