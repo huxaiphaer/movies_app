@@ -1,7 +1,14 @@
 import {Component} from "react";
 import React from "react";
+import {searchMovie} from "../actions/searchActions";
+import {connect} from "react-redux";
 
 export class SearchForm extends Component{
+
+
+    onChange = e => {
+        this.props.searchMovie(e.target.value);
+    };
 
     render() {
         return(
@@ -27,3 +34,9 @@ export class SearchForm extends Component{
         )
     }
 }
+
+const mapStateToProps = state => ({
+    text: state.movies.text
+})
+
+export default connect(mapStateToProps,{searchMovie})(SearchForm)
