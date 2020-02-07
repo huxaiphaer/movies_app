@@ -1,13 +1,25 @@
 import {Component} from "react";
 import React from "react";
+import { connect } from "react-redux";
 import {searchMovie} from "../actions/searchActions";
-import {connect} from "react-redux";
+
 
 export class SearchForm extends Component{
+    // diapatch = new useDispatch();
+
+    constructor(props) {
+        super(props);
+
+    }
 
 
     onChange = e => {
-        this.props.searchMovie(e.target.value);
+        // console.log(
+            this.props.store.store.dispatch(searchMovie(e.target.value));
+        //);
+        // this.props.store.searchMovie(e.target.value);
+        // console.log("Testing");
+        // this.props.dispatch('moose');
     };
 
     render() {

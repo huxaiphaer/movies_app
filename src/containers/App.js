@@ -10,7 +10,7 @@ function App() {
   return (
         <Provider store={store}>
             <Navbar/>
-            <Landing/>
+            <Landing store={store}/>
             <Footer/>
         </Provider>
   );
