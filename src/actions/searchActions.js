@@ -13,7 +13,7 @@ export const fetchMovies = text => dispatch =>{
     axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${APIKey}&language=${LANGUAGE}&query=${text}`)
         .then(response => dispatch({
             type: FETCH_MOVIES,
-            payload: response.data.Search
+            payload: response.data
         }))
         .then(err =>console.log(err))
 }

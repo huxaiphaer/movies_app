@@ -7,7 +7,6 @@ export class SearchForm extends Component{
 
 
     onChange = e => {
-        console.log('---> '+Object.keys(this.props))
         this.props.searchMovie(e.target.value);
     };
 
