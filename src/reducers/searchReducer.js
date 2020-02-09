@@ -1,11 +1,12 @@
-import {FETCH_MOVIE, FETCH_MOVIES, LOADING, SEARCH_MOVIE} from "../actions/types";
+import {AUTO_COMPLETE_INPUT, FETCH_MOVIE, FETCH_MOVIES, LOADING, SEARCH_MOVIE} from "../actions/types";
 
 const initialState = {
 
     text: '',
     movies :[],
     loading: false,
-    movie:[]
+    movie:[],
+    autoCompleteMovies:[]
 }
 
 
@@ -28,6 +29,12 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 movie: action.payload,
+                loading:false
+            }
+        case AUTO_COMPLETE_INPUT:
+            return {
+                ...state,
+                autoCompleteMovies: action.payload,
                 loading:false
             }
 

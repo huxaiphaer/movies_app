@@ -1,44 +1,40 @@
-import {Component} from "react";
-import React from "react";
-import {connect} from "react-redux";
-import {searchMovie, fetchMovies, setLoading} from "../actions/searchActions";
+import React, { Component } from 'react';
+
+import { connect } from 'react-redux';
+
 import AutoComplete from "./AutoComplete";
+import {fetchMovies, searchMovie, setLoading} from "../actions/searchActions";
 
-export class SearchForm extends Component{
+export class SearchForm extends Component {
 
-
-    onChange = e => {
-        this.props.searchMovie(e.target.value);
-        this.props.fetchMovies(this.props.text)
+    onSubmit = e => {
+        e.preventDefault();
+        this.props.fetchMovies(this.props.text);
         this.props.setLoading();
     };
 
     render() {
-        return(
-            // <div className="jumbotron jumbotron-fluid mt-5 text-center">
-            //     <div className="container">
-            //         <h1 className="display-4 mb-3">
-            //             <i className="fa fa-search" /> Search for a movie
-            //         </h1>
-            //         <form id="searchForm">
-            //             <input
-            //                 type="text"
-            //                 className="form-control"
-            //                 name="searchText"
-            //                 placeholder="Search Movies"
-            //                 onChange={this.onChange}
-            //             />
-            //         </form>
-            //     </div>
-            // </div>
-            <AutoComplete/>
-        )
+        return (
+            <div className="jumbotron jumbotron-fluid mt-5 text-center">
+                <div className="container">
+                    <h1 className="display-4 mb-3">
+                        <i className="fa fa-search" /> Search for a Movie
+                    </h1>
+                        <AutoComplete/>
+                        <button onClick={this.onSubmit} className="btn btn-primary btn-bg mt-3">
+                            Search
+                        </button>
+                </div>
+            </div>
+        );
     }
 }
 
 const mapStateToProps = state => ({
     text: state.movies.text
-})
+});
 
-
-export default connect(mapStateToProps,{searchMovie, fetchMovies, setLoading})(SearchForm)
+export default connect(
+    mapStateToProps,
+    { searchMovie, fetchMovies, setLoading }
+)(SearchForm);
