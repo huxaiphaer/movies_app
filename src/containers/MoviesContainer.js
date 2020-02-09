@@ -1,7 +1,6 @@
 import React,{Component} from "react";
 import {connect} from "react-redux"
 import MovieCard from "./MovieCard";
-import Pagination from "../components/Pagination";
 
 export class MoviesContainer extends Component{
     render() {
@@ -11,14 +10,9 @@ export class MoviesContainer extends Component{
         content = movies.length > 0  ?
             movies.map((movie, index) => <MovieCard key={index} movie={movie}/>) :null
 
-        let pagination = ''
-        pagination = movies.length > 0 ?
-            <Pagination/> : null
-
         return(
             <div className="row">
                 {content}
-                {pagination}
             </div>
         )
     }

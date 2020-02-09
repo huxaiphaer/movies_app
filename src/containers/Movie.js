@@ -14,8 +14,7 @@ export class Movie extends Component{
 
     render() {
         const { loading, movie } = this.props;
-        const IMG_PATH = `${URL_IMAGE}`.concat(movie.poster_path)
-
+        const IMG_PATH = `${URL_IMAGE}/t/p/w300`.concat(movie.poster_path)
 
         let movieInfo = (
             <div className="container">
