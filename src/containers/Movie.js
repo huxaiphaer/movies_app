@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import Spinner from "../components/Spinner";
 import {fetchMovie, setLoading} from "../actions/searchActions";
 import {Link} from "react-router-dom";
+import {URL_IMAGE} from "../utils/ApiKey";
 
 export class Movie extends Component{
 
@@ -13,18 +14,20 @@ export class Movie extends Component{
 
     render() {
         const { loading, movie } = this.props;
+        const IMG_PATH = `${URL_IMAGE}`.concat(movie.poster_path)
+
 
         let movieInfo = (
             <div className="container">
                 <div className="row">
                     <div className="col-md-4 card card-body">
-                        <img src={movie.Poster} className="thumbnail" alt="Poster" />
+                        <img src={IMG_PATH} className="thumbnail" alt="Poster" />
                     </div>
                     <div className="col-md-8">
                         <h2 className="mb-4">{movie.original_title}</h2>
                         <ul className="list-group">
                             <li className="list-group-item">
-                                <strong>Genre:</strong> {movie.Genre}
+                                <strong>Number of Votes:</strong> {movie.vote_count}
                             </li>
                             <li className="list-group-item">
                                 <strong>Released:</strong> {movie.release_date}
@@ -36,7 +39,7 @@ export class Movie extends Component{
                                 <strong>Tag Line :</strong> {movie.tagline}
                             </li>
                             <li className="list-group-item">
-                                <strong>Director:</strong> {movie.Director}
+                                <strong>Status:</strong> {movie.status}
                             </li>
                         </ul>
                     </div>
@@ -45,16 +48,9 @@ export class Movie extends Component{
                     <div className="card card-body bg-dark my-5 text-light">
                         <div className="col-md-12">
                             <h3>About </h3>
-                            {movie.Plot}
+                            {movie.overview}
                             <hr />
-                            <a
-                                href={'https://www.imdb.com/title/' + movie.imdbID}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="btn btn-primary"
-                            >
-                                View on IMDB
-                            </a>
+
                             <Link to="/" className="btn btn-default text-light">
                                 Go Back To Search
                             </Link>

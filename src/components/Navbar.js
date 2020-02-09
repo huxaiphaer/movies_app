@@ -6,7 +6,7 @@ function Navbar() {
       <nav className="navbar navbar-dark bg-dark">
         <div className="container">
           <div className="navbar-header">
-              MovieSeriesInfo
+              Movies Info
           </div>
         </div>
       </nav>

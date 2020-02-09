@@ -8,13 +8,9 @@ export class SearchForm extends Component{
 
     onChange = e => {
         this.props.searchMovie(e.target.value);
-    };
-
-    onSubmit = e => {
-        e.preventDefault()
         this.props.fetchMovies(this.props.text)
         this.props.setLoading();
-    }
+    };
 
     render() {
         return(
@@ -23,7 +19,7 @@ export class SearchForm extends Component{
                     <h1 className="display-4 mb-3">
                         <i className="fa fa-search" /> Search for a movie
                     </h1>
-                    <form id="searchForm" onSubmit={this.onSubmit}>
+                    <form id="searchForm">
                         <input
                             type="text"
                             className="form-control"
@@ -31,9 +27,6 @@ export class SearchForm extends Component{
                             placeholder="Search Movies"
                             onChange={this.onChange}
                         />
-                        <button type="submit" className="btn btn-primary btn-bg mt-3">
-                            Search
-                        </button>
                     </form>
                 </div>
             </div>
