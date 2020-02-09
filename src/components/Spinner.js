@@ -1,3 +1,4 @@
+import React from "react";
 import spinner from '../static/gif/spinner.gif'
 
 function Spinner() {
@@ -12,3 +13,5 @@ function Spinner() {
         </div>
     )
 }
+
+export default Spinner
