@@ -16,6 +16,8 @@ This is how you can make this project run on your local machine.
 
 ### Installation
 
+* Install and Setup Docker, since this application will run inside docker.
+
 * You will need to have yarn installed, the best way to install yarn is by visiting this site. [Install Yarn](https://yarnpkg.com/lang/en/)
 
 * Then, Clone this repository by running the command:
@@ -42,7 +44,7 @@ module.exports ={
 
 #### Starting the app.
 
-* To start the app locally run the following command:
+* To start the app locally run the following command with docker:
 
 ```
 docker-compose up -d --build
@@ -70,9 +72,8 @@ yarn test --coverage --watchAll=false
 
 ## Languages/Frameworks/Libraries & tools Used.
 
-* Reactjs.
+* React.js.
 * ES6.
-* Code Climate.
 * Bootstrap
 * Travis.
 * Redux.
