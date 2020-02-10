@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styles/App.css';
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import Landing from "./Landing";
 import store from "../store/store";
 import {Provider} from "react-redux";
@@ -16,7 +15,6 @@ function App() {
                     <Navbar/>
                     <Route exact path="/" component={Landing}/>
                     <Route exact path="/movie/:id" component={Movie}/>
-                    <Footer/>
                 </div>
             </Router>
         </Provider>

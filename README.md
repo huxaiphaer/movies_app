@@ -45,11 +45,14 @@ module.exports ={
 * To start the app locally run the following command:
 
 ```
-yarn start
+docker-compose up -d --build
 
 ```
 
-Then you will be routed to this link [Local link](http://localhost:8080/)
+After the build finishing,  you can then route in your browser : http://localhost:3001/
+
+
+Viola, then you are good to search Movies :-)
 
 #### Testing / Running tests.
 
@@ -73,6 +76,7 @@ yarn test --coverage --watchAll=false
 * Bootstrap
 * Travis.
 * Redux.
+* Docker.
 
 ## Author.
 
