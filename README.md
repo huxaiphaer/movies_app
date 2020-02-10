@@ -1,68 +1,79 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Build Status](https://travis-ci.com/huxaiphaer/alpaca.svg?token=7t2CkfpVwz422XzizRaG&branch=master)](https://travis-ci.com/huxaiphaer/alpaca)
 
-## Available Scripts
+# Movies App
 
-In the project directory, you can run:
+This a web application which is capable of searching and showing more details of a Movie.
 
-### `yarn start`
+#### Functionalities of the Application.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Search a Movie.
+- Get to know the details of the movie.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `yarn test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This is how you can make this project run on your local machine.
 
-### `yarn build`
+### Installation
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* You will need to have yarn installed, the best way to install yarn is by visiting this site. [Install Yarn](https://yarnpkg.com/lang/en/)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+* Then, Clone this repository by running the command:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+https://github.com/huxaiphaer/alpaca.git
 
-### `yarn eject`
+```
+* After successfully cloning the repo, then run this command `cd alpaca` to enter the root directory of the project.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* Then install the project dependencies by running `yarn` & `yarn install`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* After that, you will need to create a folder inside `src`  called `utils` then and include add another file `ApiKey.js`,
+and paste the following :
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```$xslt
+module.exports ={
+    APIKey: 'f3a05026119d09f84c9aaef927a18ac2',
+    LANGUAGE: 'en-US',
+    URL: 'https://api.themoviedb.org',
+    URL_IMAGE:'https://image.tmdb.org'
+}
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Starting the app.
 
-## Learn More
+* To start the app locally run the following command:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+yarn start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
 
-### Code Splitting
+Then you will be routed to this link [Local link](http://localhost:8080/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+#### Testing / Running tests.
 
-### Analyzing the Bundle Size
+```
+yarn test
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+```
 
-### Making a Progressive Web App
+#### Running tests with coverage.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+```
+yarn test --coverage --watchAll=false 
 
-### Advanced Configuration
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## Languages/Frameworks/Libraries & tools Used.
 
-### Deployment
+* Reactjs.
+* ES6.
+* Code Climate.
+* Bootstrap
+* Travis.
+* Redux.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## Author.
 
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* Lutaaya Huzaifah Idris.
