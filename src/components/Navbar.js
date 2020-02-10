@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/App.css"
 
 function Navbar() {
     return (
@@ -6,7 +7,7 @@ function Navbar() {
       <nav className="navbar navbar-dark bg-dark">
         <div className="container">
           <div className="navbar-header">
-              Movies Info
+              <span className="navbar-text">MoviesHub</span>
           </div>
         </div>
       </nav>
