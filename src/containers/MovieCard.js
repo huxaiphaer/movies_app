@@ -19,7 +19,7 @@ export class MovieCard extends Component {
                     </h5>
                     <Link className="btn btn-primary" to={'/movie/'.concat(movie.id)}>
                         Movie Details
-                        <i className="fas fa-chevron-right"/>
+                          <i className="fa fa-film"/>
                     </Link>
                 </div>
             </div>
