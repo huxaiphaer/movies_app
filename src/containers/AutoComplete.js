@@ -27,7 +27,7 @@ export class AutoComplete extends Component{
     }
 
     render() {
-        let {autoCompleteMovies} = this.props
+        let {autoCompleteMovies} = this.props;
 
         return (
             <div>
@@ -39,7 +39,7 @@ export class AutoComplete extends Component{
                         id:"movies",
                         value:this.state.movie,
                         onChange:(_event, {newValue})=>{
-                            this.setState({movie:newValue})
+                            this.setState({movie:newValue});
                             this.props.searchMovie(newValue);
                         }
 
@@ -48,7 +48,7 @@ export class AutoComplete extends Component{
                     onSuggestionsFetchRequested={async ({value}) => {
 
                         if(!value){
-                            this.setState({suggestions:[]})
+                            this.setState({suggestions:[]});
                             return;
                         }
                         try {
@@ -89,6 +89,6 @@ export class AutoComplete extends Component{
 const mapStateToProps = state => ({
     text: state.movies.text,
     autoCompleteMovies: state.movies.autoCompleteMovies
-})
+});
 
 export default connect(mapStateToProps, { searchAutoCompleteMovies, searchMovie})(AutoComplete)

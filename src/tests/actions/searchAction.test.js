@@ -21,8 +21,8 @@ describe('Search Actions', () => {
 
 
     it('should test fetch movies ', () => {
-        moxios.wait(`${URL}/3/search/movie/?api_key=${APIKey}&language=${LANGUAGE}
-        &query=${"gemini"}`, {
+        moxios.wait(`${ URL }/3/search/movie/?api_key=${ APIKey }&language=${ LANGUAGE }
+        &query=gemini`, {
             status: 200,
             data: {results: [{id:1, name:'gemini'},{id:2, name:'gemini 2'}]}
         });
@@ -39,7 +39,7 @@ describe('Search Actions', () => {
     });
 
     it('should test fetch a single movie ', () => {
-        moxios.wait(`${URL}/3/movie/${"2"}?api_key=${APIKey}&language=${LANGUAGE}`, {
+        moxios.wait(`${ URL }/3/movie/2?api_key=${ APIKey }&language=${ LANGUAGE }`, {
             status: 200,
             data: {results: [{id:1, name:'gemini'},{id:2, name:'gemini 2'}]}
         });
@@ -56,8 +56,8 @@ describe('Search Actions', () => {
     });
 
     it('should test for search auto-complete movies', () => {
-        moxios.wait(`${URL}/3/search/movie/?api_key=${APIKey}&language=${LANGUAGE}
-    &query=${"gemini"}`, {
+        moxios.wait(`${ URL }/3/search/movie/?api_key=${ APIKey }&language=${ LANGUAGE }
+    &query=gemini`, {
             status: 200,
             data: {results: [{id:1, name:'gemini'},{id:2, name:'gemini 2'}]}
         });
