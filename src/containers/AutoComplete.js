@@ -2,6 +2,7 @@ import React , {Component} from "react";
 import Autosuggest from 'react-autosuggest';
 import {connect} from "react-redux"
 import {searchAutoCompleteMovies, searchMovie} from "../actions/searchActions";
+import "../styles/AutoComplete.css"
 
 export class AutoComplete extends Component{
 
@@ -13,6 +14,18 @@ export class AutoComplete extends Component{
         };
     }
 
+    renderSuggestion(suggestion) {
+        return (
+            <span>{suggestion.name}</span>
+        );
+    }
+
+     renderSectionTitle(section) {
+        return (
+            <strong>{section.title}</strong>
+        );
+    }
+
     render() {
         let {autoCompleteMovies} = this.props
 
@@ -20,8 +33,8 @@ export class AutoComplete extends Component{
             <div>
                 <Autosuggest
                     inputProps={{
-                        placeholder : "SEARCH YOUR FAVORITE MOVIE",
-                        autoComplete :"",
+                        placeholder : "Search Your Favorite Movie",
+
                         name:"movies",
                         id:"movies",
                         value:this.state.movie,
@@ -56,7 +69,17 @@ export class AutoComplete extends Component{
                     }}
 
                     getSuggestionValue={suggestion=> suggestion.name}
-                    renderSuggestion={suggestion => <div>{suggestion.name}</div>}
+                    renderSuggestion={suggestion =>
+                        <span>
+                            {suggestion.name}
+                        </span>
+                    }
+                    renderSectionTitle ={
+                        suggestion =>
+                            <span>
+                            {suggestion.release_date}
+                        </span>
+                    }
                 />
             </div>
         );

@@ -20,3 +20,16 @@
     height: 240px;
   }
 }
+
+.navbar-text{
+  color: white !important;
+  height: 50px;
+  font-weight: bold;
+  font-size: 15px;
+
+}
+
+.auto-widget{
+
+  background: #F6C6CE;
+}

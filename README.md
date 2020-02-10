@@ -16,6 +16,8 @@ This is how you can make this project run on your local machine.
 
 ### Installation
 
+* Install and Setup Docker, since this application will run inside docker.
+
 * You will need to have yarn installed, the best way to install yarn is by visiting this site. [Install Yarn](https://yarnpkg.com/lang/en/)
 
 * Then, Clone this repository by running the command:
@@ -28,21 +30,20 @@ https://github.com/huxaiphaer/alpaca.git
 
 * Then install the project dependencies by running `yarn` & `yarn install`.
 
-* After that, you will need to create a folder inside `src`  called `utils` then and include add another file `ApiKey.js`,
-and paste the following :
+* After that, you will need to create a file `.env.development` in the root folder of the project.
+After creating it, then paste the following :
 
 ```$xslt
-module.exports ={
-    APIKey: 'f3a05026119d09f84c9aaef927a18ac2',
-    LANGUAGE: 'en-US',
-    URL: 'https://api.themoviedb.org',
-    URL_IMAGE:'https://image.tmdb.org'
-}
+
+REACT_APP_APIKey=f3a05026119d09f84c9aaef927a18ac2
+REACT_APP_LANGUAGE=en-US
+REACT_APP_URL=https://api.themoviedb.org
+REACT_APP_URL_IMAGE=https://image.tmdb.org
 ```
 
 #### Starting the app.
 
-* To start the app locally run the following command:
+* To start the app locally run the following command with docker:
 
 ```
 docker-compose up -d --build
@@ -70,9 +71,8 @@ yarn test --coverage --watchAll=false
 
 ## Languages/Frameworks/Libraries & tools Used.
 
-* Reactjs.
+* React.js.
 * ES6.
-* Code Climate.
 * Bootstrap
 * Travis.
 * Redux.
