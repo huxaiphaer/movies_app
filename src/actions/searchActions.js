@@ -10,7 +10,7 @@ export const searchMovie = text =>  dispatch => {
 }
 
 export const fetchMovies = text => dispatch =>{
-    axios.get(`${URL}/3/search/movie/?api_key=${APIKey}&language=${LANGUAGE}
+    return axios.get(`${URL}/3/search/movie/?api_key=${APIKey}&language=${LANGUAGE}
     &query=${text}`)
         .then(response => dispatch({
             type: FETCH_MOVIES,
@@ -20,7 +20,7 @@ export const fetchMovies = text => dispatch =>{
 }
 
 export const fetchMovie = id  => dispatch  => {
-    axios.get(`${URL}/3/movie/${id}?api_key=${APIKey}&language=${LANGUAGE}`)
+    return axios.get(`${URL}/3/movie/${id}?api_key=${APIKey}&language=${LANGUAGE}`)
         .then(response => dispatch({
             type: FETCH_MOVIE,
             payload: response.data
@@ -36,7 +36,7 @@ export const setLoading = () => {
 }
 
 export const searchAutoCompleteMovies = text => dispatch =>{
-    axios.get(`${URL}/3/search/movie/?api_key=${APIKey}&language=${LANGUAGE}
+    return axios.get(`${URL}/3/search/movie/?api_key=${APIKey}&language=${LANGUAGE}
     &query=${text}`)
         .then(response => dispatch({
             type: AUTO_COMPLETE_INPUT,
