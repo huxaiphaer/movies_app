@@ -16,7 +16,7 @@ This is how you can make this project run on your local machine.
 
 ### Installation
 
-* Install and Setup Docker, since this application will run inside docker.
+* Install **Docker** (_If you don't have it_) and Setup it up, since this application will run inside a docker container.
 
 * You will need to have yarn installed, the best way to install yarn is by visiting this site. [Install Yarn](https://yarnpkg.com/lang/en/)
 
@@ -24,17 +24,15 @@ This is how you can make this project run on your local machine.
 
 ```
 https://github.com/huxaiphaer/alpaca.git
-
 ```
 * After successfully cloning the repo, then run this command `cd alpaca` to enter the root directory of the project.
 
 * Then install the project dependencies by running `yarn` & `yarn install`.
 
 * After that, you will need to create a file `.env.development` in the root folder of the project.
-After creating it, then paste the following :
+After creating it, then paste the following environment variables :
 
 ```$xslt
-
 REACT_APP_APIKey=f3a05026119d09f84c9aaef927a18ac2
 REACT_APP_LANGUAGE=en-US
 REACT_APP_URL=https://api.themoviedb.org
@@ -43,30 +41,27 @@ REACT_APP_URL_IMAGE=https://image.tmdb.org
 
 #### Starting the app.
 
-* To start the app locally run the following command with docker:
+* To start the app locally, we first build the docker container by running  the following command with docker:
 
 ```
 docker-compose up -d --build
-
 ```
 
-After the build finishing,  you can then route in your browser : http://localhost:3001/
+After the build finishing,  you can then route in your browser  with this local URL: http://localhost:3001/
 
 
-Viola, then you are good to search Movies :-)
+Viola, then you are good to search Movies :)
 
 #### Testing / Running tests.
 
 ```
 yarn test
-
 ```
 
 #### Running tests with coverage.
 
 ```
 yarn test --coverage --watchAll=false 
-
 ```
 
 ## Languages/Frameworks/Libraries & tools Used.

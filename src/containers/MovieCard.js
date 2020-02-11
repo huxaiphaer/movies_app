@@ -7,8 +7,8 @@ export class MovieCard extends Component {
 
     render() {
 
-        const {movie} = this.props
-        const IMG_PATH = `${URL_IMAGE}/t/p/w500`.concat(movie.poster_path)
+        const {movie} = this.props;
+        const IMG_PATH = `${URL_IMAGE}/t/p/w500`.concat(movie.poster_path);
 
         return(
             <div className="col-md-3 mb-5">
